@@ -26,6 +26,10 @@ class Clip {
             } else {
                 this.danmakus.splice(low, 0, danmaku)
             }
+            if (low <= this.pointer) {
+                // 新弹幕插入到了 [0, pointer] 的位置上
+                this.pointer++  // 向后移动 pointer
+            }
         }
     }
     /**
