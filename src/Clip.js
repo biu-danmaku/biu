@@ -9,6 +9,9 @@ class Clip {
      * @param {Object} danmaku 弹幕对象
      */
     load(danmaku) {
+        if ((!danmaku.text && !danmaku.html) || !danmaku.time) {
+            return
+        }
         if (this.danmakus.length === 0) {
             this.danmakus.push(danmaku)
         } else {
