@@ -40,7 +40,7 @@ class Biu {
     resume() {
         let now = Date.now()
         this.startedAt += now - this.pausedAt
-        this.stage.syncTimeStamp(now - this.pausedAt)
+        this.stage.syncTimestamp(now - this.pausedAt)
         this.stage.resume(now)
         requestAnimationFrame(garbageCollectionFrame.bind(this))
     }

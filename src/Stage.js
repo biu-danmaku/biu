@@ -83,9 +83,9 @@ class Stage {
     resume(now = Date.now()) {
         this.bullets.flying.forEach(bullet => bullet.resume(now))
     }
-    syncTimeStamp(value) {
+    syncTimestamp(value) {
         for (let key in this.tracks) {
-            this.tracks[key].syncTimeStamp(value)
+            this.tracks[key].syncTimestamp(value)
         }
         this.bullets.flying.forEach(bullet => {
             bullet.finish += value

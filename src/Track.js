@@ -82,7 +82,7 @@ class Track {
             this.height = newHeight
         merge.call(this, 0, this.tracks.length - 1, this.height, 0, 0)
     }
-    syncTimeStamp(value) {
+    syncTimestamp(value) {
         this.tracks.forEach(track => {
             track.show += value
             track.finish += value
