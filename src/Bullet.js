@@ -19,12 +19,13 @@ class Bullet {
         this.dom.innerText = danmaku.text
         this.dom.style.cssText = ''
         Object.assign(this.dom.style, style, danmaku.style, {
-            userSelect:    'none',
-            position:      'absolute',
-            whiteSpace:    'pre',
-            pointerEvents: 'none',
-            display:       'inline-block',
-            visibility:    'hidden',
+            webkitUserSelect: 'none',
+            userSelect:       'none',
+            position:         'absolute',
+            whiteSpace:       'pre',
+            pointerEvents:    'none',
+            display:          'inline-block',
+            visibility:       'hidden',
         })
         if (danmaku.type === 1) {
             this.pauseTime = 0
