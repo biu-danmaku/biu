@@ -9,7 +9,7 @@ class Clip {
      * @param {Object} danmaku 弹幕对象
      */
     load(danmaku) {
-        if ((!danmaku.text && !danmaku.html) || !danmaku.time) {
+        if ((!danmaku.text && !danmaku.html) || typeof danmaku.time !== 'number') {
             return
         }
         if (this.danmakus.length === 0) {
